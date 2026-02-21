@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PhotoPrune Support</title>
+  <meta name="description" content="Send feedback and support requests for PhotoPrune.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="header">
+        <p class="eyebrow">PhotoPrune</p>
+        <h1>Support and Feedback</h1>
+        <p class="subtle">
+          Need help, found a bug, or have an idea? Send a message and we will reply by email.
+        </p>
+      </header>
+
+      <form id="feedback-form" action="https://formsubmit.co/ivangheorgheadrian@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="PhotoPrune Feedback">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_honey" value="">
+        <input type="hidden" name="_next" id="next-url" value="">
+
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic" required>
+          <option value="">Select one</option>
+          <option>Bug report</option>
+          <option>Feature request</option>
+          <option>General feedback</option>
+          <option>Support request</option>
+        </select>
+
+        <div class="grid">
+          <div>
+            <label for="app-version">App version</label>
+            <input id="app-version" name="app_version" type="text" placeholder="e.g. 1.0.0">
+          </div>
+          <div>
+            <label for="ios-version">iOS version</label>
+            <input id="ios-version" name="ios_version" type="text" placeholder="e.g. iOS 18.2">
+          </div>
+        </div>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="7" minlength="10" required></textarea>
+
+        <label class="checkbox">
+          <input type="checkbox" name="consent" required>
+          <span>I agree this information can be used to contact me about my request.</span>
+        </label>
+
+        <button type="submit">Send Feedback</button>
+      </form>
+
+      <footer class="footer">
+        <p>
+          If the form fails, email directly:
+          <a href="mailto:ivangheorgheadrian@gmail.com">ivangheorgheadrian@gmail.com</a>
+        </p>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var next = document.getElementById("next-url");
+      if (!next) return;
+      var base = window.location.href.replace(/[^/]*$/, "");
+      next.value = base + "thanks.html";
+    })();
+  </script>
+</body>
+</html>
