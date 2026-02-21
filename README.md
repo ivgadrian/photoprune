@@ -6,6 +6,7 @@ This folder is ready for GitHub Pages hosting.
 
 - `index.html`: support and feedback form
 - `thanks.html`: confirmation page after submit
+- `privacy.html`: privacy policy for App Store review
 - `styles.css`: page styles
 
 ## Form Delivery
